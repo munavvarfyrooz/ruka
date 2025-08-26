@@ -18,7 +18,7 @@ export const emailSubscriptions = pgTable("email_subscriptions", {
 export const callRequests = pgTable("call_requests", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   phoneNumber: text("phone_number").notNull(),
-  email: text("email").notNull(),
+  email: text("email"),  // Made optional
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
@@ -40,7 +40,7 @@ export const insertCallRequestSchema = createInsertSchema(callRequests).pick({
   phoneNumber: z.string()
     .min(10, "Phone number must be at least 10 digits")
     .regex(/^\+?[1-9]\d{1,14}$/, "Please enter a valid phone number with country code (e.g., +1234567890)"),
-  email: z.string().email("Please enter a valid email address"),
+  email: z.string().email("Please enter a valid email address").optional().or(z.literal("")),
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
