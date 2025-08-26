@@ -1,0 +1,228 @@
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Calling Agent - The Future of Calls is Here</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'electric-blue': '#3B82F6',
+                        'electric-blue-dark': '#1D4ED8',
+                        'neutral-dark': '#0F0F0F',
+                        'neutral-gray': '#1A1A1A',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="h-full bg-white dark:bg-neutral-dark font-inter antialiased">
+    <!-- @COMPONENT: App [Main landing page component] -->
+    <div class="min-h-screen flex flex-col">
+        <!-- @COMPONENT: Header [Navigation component] -->
+        <header class="absolute top-0 left-0 right-0 z-10 p-6">
+            <nav class="max-w-7xl mx-auto flex justify-between items-center">
+                <div class="text-xl font-bold text-neutral-dark dark:text-white">
+                    AI Agent
+                </div>
+                <button class="p-2 rounded-lg bg-gray-100 dark:bg-neutral-gray text-neutral-dark dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+            </nav>
+        </header>
+        <!-- @END_COMPONENT: Header -->
+
+        <!-- @COMPONENT: MainContent [Hero and main sections] -->
+        <main class="flex-1 flex flex-col items-center justify-center px-6 pt-20 pb-12">
+            <div class="max-w-4xl mx-auto text-center space-y-12">
+                
+                <!-- @COMPONENT: HeroSection [Main tagline and description] -->
+                <div class="space-y-6">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-neutral-dark dark:text-white leading-tight tracking-tight">
+                        The Future of 
+                        <span class="bg-gradient-to-r from-electric-blue to-electric-blue-dark bg-clip-text text-transparent">
+                            Calls
+                        </span> 
+                        is Here.
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium max-w-2xl mx-auto leading-relaxed">
+                        Experience our AI calling agent in action.
+                    </p>
+                </div>
+                <!-- @END_COMPONENT: HeroSection -->
+
+                <!-- @COMPONENT: EmailCaptureSection [Email input form] -->
+                <div class="bg-gray-50 dark:bg-neutral-gray rounded-2xl p-8 md:p-12 shadow-lg border border-gray-200 dark:border-gray-700">
+                    <h2 class="text-2xl md:text-3xl font-bold text-neutral-dark dark:text-white mb-4">
+                        Stay updated – enter your email.
+                    </h2>
+                    <form class="space-y-4" data-implementation="Email validation and submission logic">
+                        <!-- @STATE: email:string, isValidEmail:boolean, isSubmitting:boolean -->
+                        <div class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+                            <input 
+                                type="email" 
+                                placeholder="your.email@example.com" 
+                                data-bind="email"
+                                data-mock="true"
+                                class="flex-1 px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-neutral-dark text-neutral-dark dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-electric-blue focus:border-transparent transition-all duration-200"
+                                required
+                            />
+                            <button 
+                                type="submit"
+                                data-event="click:handleEmailSubmit"
+                                data-implementation="Should validate email format before submission"
+                                class="px-8 py-3 bg-electric-blue hover:bg-electric-blue-dark text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-105 focus:ring-4 focus:ring-electric-blue/30 whitespace-nowrap"
+                            >
+                                Notify Me
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                            We'll notify you when new features are available.
+                        </p>
+                    </form>
+                </div>
+                <!-- @END_COMPONENT: EmailCaptureSection -->
+
+                <!-- @COMPONENT: CallToActionSection [Phone number and call button] -->
+                <div class="bg-gradient-to-br from-electric-blue to-electric-blue-dark rounded-2xl p-8 md:p-12 shadow-2xl">
+                    <div class="space-y-6">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white">
+                            Ready to experience the future?
+                        </h2>
+                        
+                        <div class="flex items-center justify-center space-x-3 text-white/90">
+                            <span class="text-2xl">📞</span>
+                            <span class="text-xl md:text-2xl font-semibold">
+                                Try it now: +1-234-567-8900
+                            </span>
+                        </div>
+                        
+                        <a 
+                            href="tel:+12345678900" 
+                            data-event="click:trackCallAttempt"
+                            data-implementation="Should track call analytics"
+                            class="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-gray-100 text-electric-blue font-bold text-lg rounded-xl transition-all duration-200 transform hover:scale-105 focus:ring-4 focus:ring-white/30 shadow-lg"
+                        >
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                            </svg>
+                            Call the Agent
+                        </a>
+                        
+                        <p class="text-white/80 text-sm">
+                            Available 24/7 • Free demo call
+                        </p>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: CallToActionSection -->
+
+                <!-- @COMPONENT: FeatureHighlights [Additional features showcase] -->
+                <div class="grid md:grid-cols-3 gap-6 mt-16">
+                    <div class="text-center space-y-3">
+                        <div class="w-12 h-12 bg-electric-blue/10 rounded-xl flex items-center justify-center mx-auto">
+                            <svg class="w-6 h-6 text-electric-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-neutral-dark dark:text-white">Lightning Fast</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Instant responses with human-like conversation</p>
+                    </div>
+                    
+                    <div class="text-center space-y-3">
+                        <div class="w-12 h-12 bg-electric-blue/10 rounded-xl flex items-center justify-center mx-auto">
+                            <svg class="w-6 h-6 text-electric-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-neutral-dark dark:text-white">Always Available</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">24/7 service with no wait times</p>
+                    </div>
+                    
+                    <div class="text-center space-y-3">
+                        <div class="w-12 h-12 bg-electric-blue/10 rounded-xl flex items-center justify-center mx-auto">
+                            <svg class="w-6 h-6 text-electric-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-neutral-dark dark:text-white">Secure & Private</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Enterprise-grade security for all conversations</p>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: FeatureHighlights -->
+
+            </div>
+        </main>
+        <!-- @END_COMPONENT: MainContent -->
+
+        <!-- @COMPONENT: Footer [Bottom navigation and links] -->
+        <footer class="border-t border-gray-200 dark:border-gray-700 py-8 px-6">
+            <div class="max-w-7xl mx-auto text-center text-gray-600 dark:text-gray-400">
+                <p>&copy; 2024 AI Agent. Built for the future of communication.</p>
+            </div>
+        </footer>
+        <!-- @END_COMPONENT: Footer -->
+    </div>
+    <!-- @END_COMPONENT: App -->
+
+    <script>
+        (function() {
+            // TODO: Implement business logic, API calls, or state management
+            
+            // Basic email validation
+            const emailForm = document.querySelector('form');
+            const emailInput = document.querySelector('input[type="email"]');
+            
+            if (emailForm && emailInput) {
+                emailForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const email = emailInput.value.trim();
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    
+                    if (!emailRegex.test(email)) {
+                        alert('Please enter a valid email address.');
+                        return;
+                    }
+                    
+                    // TODO: Implement actual email submission
+                    alert('Thanks for signing up! We\'ll notify you about updates.');
+                    emailInput.value = '';
+                });
+            }
+            
+            // Dark mode detection and persistence
+            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            const html = document.documentElement;
+            
+            function updateDarkMode(e) {
+                if (e.matches) {
+                    html.classList.add('dark');
+                } else {
+                    html.classList.remove('dark');
+                }
+            }
+            
+            darkModeMediaQuery.addListener(updateDarkMode);
+            updateDarkMode(darkModeMediaQuery);
+            
+            // TODO: Implement call tracking analytics
+            const callButton = document.querySelector('a[href^="tel:"]');
+            if (callButton) {
+                callButton.addEventListener('click', function() {
+                    // TODO: Track call attempt in analytics
+                    console.log('Call attempt tracked');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Calling Agent - The Future of Calls is Here</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'electric-blue': '#0066FF',
+                        'electric-blue-dark': '#0052CC',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                    },
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 102, 255, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(0, 102, 255, 0.5); }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .dark-mode-bg {
+                background: linear-gradient(135deg, #111827 0%, #000000 100%);
+            }
+            .dark-mode-text {
+                color: #F9FAFB;
+            }
+            .dark-mode-card {
+                background: rgba(17, 24, 39, 0.8);
+                border: 1px solid rgba(55, 65, 81, 0.3);
+            }
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-black min-h-screen">
+    
+    <!-- @COMPONENT: MainLayout [fullscreen centered container] -->
+    <div class="min-h-screen flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden">
+        
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-10 w-32 h-32 bg-electric-blue rounded-full blur-xl"></div>
+            <div class="absolute bottom-32 right-16 w-24 h-24 bg-purple-500 rounded-full blur-xl"></div>
+            <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-pink-400 rounded-full blur-xl"></div>
+        </div>
+        
+        <!-- @COMPONENT: HeroSection [main content container] -->
+        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+            
+            <!-- Main Tagline -->
+            <div class="space-y-4">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 dark:text-white leading-tight tracking-tight">
+                    The Future of 
+                    <span class="bg-gradient-to-r from-electric-blue to-purple-600 bg-clip-text text-transparent">
+                        Calls
+                    </span> 
+                    is Here.
+                </h1>
+                
+                <p class="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-medium max-w-2xl mx-auto leading-relaxed">
+                    Experience our AI calling agent in action.
+                </p>
+            </div>
+            
+            <!-- @COMPONENT: CTASection [phone call card] -->
+            <div class="animate-slide-up" style="animation-delay: 0.2s; animation-fill-mode: both;">
+                <div class="bg-gradient-to-r from-electric-blue to-electric-blue-dark p-8 rounded-2xl shadow-2xl max-w-md mx-auto transform hover:scale-105 transition-all duration-300 animate-pulse-glow">
+                    <div class="text-center space-y-6">
+                        
+                        <!-- Phone Icon -->
+                        <div class="bg-white bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-phone-alt text-2xl text-white"></i>
+                        </div>
+                        
+                        <!-- Phone Number -->
+                        <div>
+                            <p class="text-white text-sm font-medium uppercase tracking-wider mb-2">Try it now</p>
+                            <p class="text-white text-2xl font-bold tracking-wide">
+                                📞 +1-234-567-8900
+                            </p>
+                        </div>
+                        
+                        <!-- Call Button -->
+                        <a href="tel:+12345678900" class="inline-block w-full">
+                            <button class="w-full bg-white text-electric-blue font-bold py-4 px-8 rounded-xl hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg">
+                                <i class="fas fa-phone mr-2"></i>
+                                Call the Agent
+                            </button>
+                        </a>
+                        
+                        <p class="text-white text-xs opacity-80">
+                            Our AI agent will answer your call instantly
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- @COMPONENT: EmailSection [email subscription] -->
+            <div class="animate-slide-up max-w-md mx-auto" style="animation-delay: 0.4s; animation-fill-mode: both;">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                    <p class="text-gray-700 dark:text-gray-300 font-medium mb-4 text-center">
+                        Stay updated – enter your email.
+                    </p>
+                    
+                    <!-- @FUNCTIONALITY: Email validation and subscription form -->
+                    <form class="space-y-4" data-implementation="Should validate email format and handle subscription">
+                        <div class="relative">
+                            <input 
+                                type="email" 
+                                placeholder="your@email.com" 
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-electric-blue focus:border-transparent outline-none transition-all duration-200"
+                                data-bind="email"
+                                data-mock="true"
+                                required
+                            >
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                                <i class="fas fa-envelope text-gray-400"></i>
+                            </div>
+                        </div>
+                        
+                        <button 
+                            type="submit" 
+                            class="w-full bg-electric-blue text-white font-bold py-3 px-6 rounded-lg hover:bg-electric-blue-dark transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-md"
+                            data-event="click:handleEmailSubmit"
+                            data-implementation="Should validate email before submission"
+                        >
+                            <i class="fas fa-bell mr-2"></i>
+                            Notify Me
+                        </button>
+                    </form>
+                    
+                    <p class="text-xs text-gray-500 dark:text-gray-400 text-center mt-3">
+                        Get early access and product updates
+                    </p>
+                </div>
+            </div>
+            
+            <!-- @COMPONENT: FeatureHighlights [brief feature list] -->
+            <div class="animate-slide-up pt-8" style="animation-delay: 0.6s; animation-fill-mode: both;">
+                <div class="flex flex-wrap justify-center gap-8 text-sm text-gray-600 dark:text-gray-400">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-robot text-electric-blue"></i>
+                        <span>Advanced AI Technology</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-clock text-electric-blue"></i>
+                        <span>24/7 Availability</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-shield-alt text-electric-blue"></i>
+                        <span>Enterprise Security</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-language text-electric-blue"></i>
+                        <span>Multi-Language Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- @COMPONENT: Footer [minimal footer] -->
+        <div class="absolute bottom-8 left-0 right-0 text-center">
+            <p class="text-xs text-gray-400 dark:text-gray-500">
+                Powered by advanced AI technology • 
+                <span class="text-electric-blue">vocallabs.ai</span>
+            </p>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: MainLayout -->
+
+    <script>
+        // Email form validation and submission
+        (function() {
+            const form = document.querySelector('form');
+            const emailInput = document.querySelector('input[type="email"]');
+            const submitButton = form.querySelector('button[type="submit"]');
+            
+            // TODO: Implement actual email subscription API integration
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                
+                if (!emailRegex.test(email)) {
+                    // Show validation error
+                    emailInput.classList.add('border-red-500', 'focus:ring-red-500');
+                    emailInput.classList.remove('border-gray-300', 'focus:ring-electric-blue');
+                    
+                    // Create or update error message
+                    let errorMsg = form.querySelector('.error-message');
+                    if (!errorMsg) {
+                        errorMsg = document.createElement('p');
+                        errorMsg.className = 'error-message text-red-500 text-xs mt-1';
+                        emailInput.parentNode.appendChild(errorMsg);
+                    }
+                    errorMsg.textContent = 'Please enter a valid email address';
+                    
+                    return;
+                }
+                
+                // Remove error styling
+                emailInput.classList.remove('border-red-500', 'focus:ring-red-500');
+                emailInput.classList.add('border-gray-300', 'focus:ring-electric-blue');
+                const errorMsg = form.querySelector('.error-message');
+                if (errorMsg) errorMsg.remove();
+                
+                // Show loading state
+                const originalText = submitButton.innerHTML;
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Subscribing...';
+                submitButton.disabled = true;
+                
+                // Simulate API call
+                setTimeout(() => {
+                    // Show success state
+                    submitButton.innerHTML = '<i class="fas fa-check mr-2"></i>Subscribed!';
+                    submitButton.classList.add('bg-green-500');
+                    submitButton.classList.remove('bg-electric-blue');
+                    
+                    // Reset after 3 seconds
+                    setTimeout(() => {
+                        submitButton.innerHTML = originalText;
+                        submitButton.disabled = false;
+                        submitButton.classList.remove('bg-green-500');
+                        submitButton.classList.add('bg-electric-blue');
+                        emailInput.value = '';
+                    }, 3000);
+                }, 1500);
+            });
+            
+            // Clear validation errors on input
+            emailInput.addEventListener('input', function() {
+                this.classList.remove('border-red-500', 'focus:ring-red-500');
+                this.classList.add('border-gray-300', 'focus:ring-electric-blue');
+                const errorMsg = form.querySelector('.error-message');
+                if (errorMsg) errorMsg.remove();
+            });
+        })();
+        
+        // Smooth scroll and interaction enhancements
+        (function() {
+            // Add intersection observer for animation triggers
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all animatable elements
+            document.querySelectorAll('.animate-slide-up').forEach(el => {
+                observer.observe(el);
+            });
+        })();
+        
+        // Dark mode detection and handling
+        (function() {
+            // TODO: Implement dark mode toggle functionality
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+            
+            function updateTheme(e) {
+                if (e.matches) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            }
+            
+            prefersDark.addListener(updateTheme);
+            updateTheme(prefersDark);
+        })();
+    </script>
+</body>
+</html>

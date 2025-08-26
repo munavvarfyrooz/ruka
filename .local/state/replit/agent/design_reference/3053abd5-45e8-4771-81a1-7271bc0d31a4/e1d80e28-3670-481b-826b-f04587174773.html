@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Calling Agent - The Future of Calls is Here</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'electric': {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a'
+                        }
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+</head>
+<body class="font-inter bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white min-h-screen">
+    <!-- @COMPONENT: App [Main landing page component] -->
+    <div class="min-h-screen flex flex-col">
+        <!-- Header with theme toggle -->
+        <header class="w-full p-6 flex justify-end">
+            <button id="themeToggle" class="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-200">
+                <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                </svg>
+                <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+            </button>
+        </header>
+
+        <!-- Main content -->
+        <main class="flex-1 flex items-center justify-center px-6">
+            <div class="max-w-4xl w-full text-center space-y-12">
+                
+                <!-- @COMPONENT: HeroSection [Main tagline and subtext] -->
+                <!-- @STATE: isVisible:boolean = true -->
+                <div class="space-y-6 animate-fade-in">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-none">
+                        <span class="bg-gradient-to-r from-electric-500 to-electric-700 bg-clip-text text-transparent">
+                            The Future of Calls
+                        </span>
+                        <br>
+                        <span class="text-slate-900 dark:text-white">is Here</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                        Experience our AI calling agent in action.
+                    </p>
+                </div>
+                <!-- @END_COMPONENT: HeroSection -->
+
+                <!-- @COMPONENT: CallToActionCard [Phone number and call button] -->
+                <div class="bg-white/10 dark:bg-slate-800/50 backdrop-blur-sm border border-white/20 dark:border-slate-700/50 rounded-2xl p-8 md:p-12 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="space-y-6">
+                        <div class="text-center">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-electric-500 to-electric-600 rounded-2xl mb-6">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-bold mb-2">Try it now</h3>
+                            <p class="text-4xl md:text-5xl font-black text-electric-500 mb-8 tracking-tight">
+                                📞 +1-234-567-8900
+                            </p>
+                        </div>
+                        
+                        <button data-event="click:openContactForm" 
+                                class="w-full bg-gradient-to-r from-electric-500 to-electric-600 hover:from-electric-600 hover:to-electric-700 text-white font-bold py-4 px-8 rounded-xl text-lg md:text-xl transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl">
+                            Call the Agent
+                        </button>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: CallToActionCard -->
+
+                <!-- @COMPONENT: EmailSignupSection [Email collection form] -->
+                <!-- @STATE: email:string = '', isValidEmail:boolean = false, isSubmitting:boolean = false -->
+                <div class="space-y-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
+                        Stay updated – enter your email
+                    </h2>
+                    
+                    <form class="max-w-md mx-auto" data-event="submit:handleEmailSubmit">
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <div class="flex-1">
+                                <input 
+                                    type="email" 
+                                    placeholder="your@email.com" 
+                                    data-bind="email"
+                                    data-mock="true"
+                                    class="w-full px-6 py-4 rounded-xl bg-white/10 dark:bg-slate-800/50 border border-white/20 dark:border-slate-700/50 backdrop-blur-sm text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-electric-500 focus:border-transparent transition-all duration-200 text-lg"
+                                    required
+                                />
+                                <!-- @FUNCTIONALITY: Email validation should check for valid email format -->
+                            </div>
+                            <button 
+                                type="submit"
+                                data-implementation="Should validate email before submission"
+                                class="px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold rounded-xl hover:bg-slate-800 dark:hover:bg-slate-100 transition-all duration-200 transform hover:scale-105 active:scale-95 text-lg whitespace-nowrap">
+                                Notify Me
+                            </button>
+                        </div>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mt-3 text-center">
+                            We'll notify you when new features are available.
+                        </p>
+                    </form>
+                </div>
+                <!-- @END_COMPONENT: EmailSignupSection -->
+
+                <!-- @COMPONENT: ContactModal [Hidden modal for contact form] -->
+                <!-- @STATE: isOpen:boolean = false, phoneNumber:string = '', email:string = '', countryCode:string = '+1' -->
+                <div id="contactModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl max-w-md w-full p-8 transform scale-95 transition-all duration-300">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Contact Information</h3>
+                            <button id="closeModal" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <form class="space-y-4" data-event="submit:handleContactSubmit">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Phone Number</label>
+                                <div class="flex">
+                                    <select data-bind="countryCode" class="px-3 py-3 bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-l-xl focus:outline-none focus:ring-2 focus:ring-electric-500">
+                                        <option value="+1">🇺🇸 +1</option>
+                                        <option value="+44">🇬🇧 +44</option>
+                                        <option value="+33">🇫🇷 +33</option>
+                                        <option value="+49">🇩🇪 +49</option>
+                                    </select>
+                                    <input 
+                                        type="tel" 
+                                        placeholder="234-567-8900"
+                                        data-bind="phoneNumber"
+                                        data-mock="true"
+                                        class="flex-1 px-4 py-3 bg-slate-100 dark:bg-slate-700 border border-l-0 border-slate-300 dark:border-slate-600 rounded-r-xl focus:outline-none focus:ring-2 focus:ring-electric-500 text-slate-900 dark:text-white"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Email</label>
+                                <input 
+                                    type="email" 
+                                    placeholder="your@email.com"
+                                    data-bind="email"
+                                    data-mock="true"
+                                    class="w-full px-4 py-3 bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-electric-500 text-slate-900 dark:text-white"
+                                    required
+                                />
+                            </div>
+                            
+                            <button 
+                                type="submit"
+                                data-implementation="Should validate form and process contact information"
+                                class="w-full bg-gradient-to-r from-electric-500 to-electric-600 hover:from-electric-600 hover:to-electric-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 active:scale-95">
+                                Submit Contact Info
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: ContactModal -->
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full p-6 text-center">
+            <p class="text-slate-500 dark:text-slate-400 text-sm">
+                © 2024 AI Calling Agent. Experience the future of communication.
+            </p>
+        </footer>
+    </div>
+    <!-- @END_COMPONENT: App -->
+
+    <script>
+        // Theme toggle functionality
+        (function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const html = document.documentElement;
+            
+            themeToggle.addEventListener('click', function() {
+                html.classList.toggle('dark');
+            });
+        })();
+
+        // Modal functionality
+        (function() {
+            const modal = document.getElementById('contactModal');
+            const closeModal = document.getElementById('closeModal');
+            const callButton = document.querySelector('[data-event="click:openContactForm"]');
+            
+            callButton.addEventListener('click', function() {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                modal.querySelector('.bg-white').classList.remove('scale-95');
+                modal.querySelector('.bg-white').classList.add('scale-100');
+            });
+            
+            closeModal.addEventListener('click', function() {
+                modal.querySelector('.bg-white').classList.add('scale-95');
+                modal.querySelector('.bg-white').classList.remove('scale-100');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }, 200);
+            });
+            
+            // Close modal when clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal.click();
+                }
+            });
+        })();
+
+        // Form validation and submission
+        (function() {
+            const emailForm = document.querySelector('[data-event="submit:handleEmailSubmit"]');
+            const contactForm = document.querySelector('[data-event="submit:handleContactSubmit"]');
+            
+            // Email validation regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (emailForm) {
+                emailForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    
+                    if (emailRegex.test(email)) {
+                        // TODO: Implement email subscription logic
+                        console.log('Email subscription:', email);
+                        alert('Thank you for subscribing! We\'ll keep you updated.');
+                        this.querySelector('input[type="email"]').value = '';
+                    } else {
+                        alert('Please enter a valid email address.');
+                    }
+                });
+            }
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    const phone = this.querySelector('input[type="tel"]').value;
+                    const countryCode = this.querySelector('select').value;
+                    
+                    if (emailRegex.test(email) && phone.trim()) {
+                        // TODO: Implement contact form submission logic
+                        console.log('Contact submission:', { email, phone: countryCode + phone });
+                        alert('Thank you! We\'ll contact you soon to set up your AI calling agent demo.');
+                        document.getElementById('closeModal').click();
+                        this.reset();
+                    } else {
+                        alert('Please fill in all fields with valid information.');
+                    }
+                });
+            }
+        })();
+
+        // Add fade-in animation on load
+        (function() {
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(30px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                .animate-fade-in {
+                    animation: fadeIn 0.8s ease-out;
+                }
+            `;
+            document.head.appendChild(style);
+        })();
+    </script>
+</body>
+</html>
