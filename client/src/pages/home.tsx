@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
-import { Phone, Mail, Bot, Clock, Shield, Languages, Bell, Check, Loader2, Sparkles, Heart, Zap, Star, TrendingUp, Users, BarChart3, Building2 } from "lucide-react";
+import { Phone, Mail, Bot, Clock, Shield, Languages, Bell, Check, Loader2, Sparkles, Heart, Zap, Star, TrendingUp, Users, BarChart3, Building2, User } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -24,8 +24,8 @@ export default function Home() {
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isCallDialogOpen, setIsCallDialogOpen] = useState(false);
   const [callFormData, setCallFormData] = useState({
-    phoneNumber: "",
-    email: ""
+    name: "",
+    phoneNumber: ""
   });
   const [phoneError, setPhoneError] = useState("");
   const { toast } = useToast();
@@ -72,9 +72,8 @@ export default function Home() {
         variant: "default",
       });
       setIsCallDialogOpen(false);
-      setCallFormData({ phoneNumber: "", email: "" });
+      setCallFormData({ name: "", phoneNumber: "" });
       setPhoneError("");
-      setCallEmailError("");
     },
     onError: (error: any) => {
       toast({
@@ -116,6 +115,16 @@ export default function Home() {
     // Reset errors
     setPhoneError("");
     
+    // Validate name
+    if (!callFormData.name || callFormData.name.trim() === "") {
+      toast({
+        title: "Name required",
+        description: "Please enter your name",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     // Validate phone number
     if (!callFormData.phoneNumber) {
       setPhoneError("Phone number is required");
@@ -125,10 +134,11 @@ export default function Home() {
       return;
     }
     
-    // Submit with phone number only (email optional)
+    // Submit with phone number and name
     callRequestMutation.mutate({
+      name: callFormData.name.trim(),
       phoneNumber: callFormData.phoneNumber,
-      email: "" // Empty email since it's not required anymore
+      email: "" // No email field in form
     });
   };
 
@@ -410,59 +420,114 @@ export default function Home() {
 
       {/* Call Request Dialog */}
       <Dialog open={isCallDialogOpen} onOpenChange={setIsCallDialogOpen}>
-        <DialogContent className="w-[95%] max-w-md mx-auto border-gray-200 dark:border-gray-700">
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
-          <DialogHeader className="space-y-3 px-2">
-            <DialogTitle className="flex flex-col sm:flex-row items-center justify-center gap-3 text-lg sm:text-xl">
-              <div className="bg-blue-50 dark:bg-blue-900/30 p-2 rounded-xl">
-                <Phone className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-              </div>
-              <span className="text-gray-900 dark:text-white font-bold text-center">
-                Experience Ruka AI
-              </span>
-            </DialogTitle>
-            <DialogDescription className="text-center text-sm px-2">
-              Enter your phone number and let our AI agent call you immediately
-            </DialogDescription>
-          </DialogHeader>
-          <form onSubmit={handleCallFormSubmit} className="space-y-4 px-2">
-            <div className="space-y-2">
-              <div className={`phone-input-container ${phoneError ? "phone-input-error" : ""}`}>
-                <PhoneInput
-                  id="phone"
-                  placeholder="Enter your phone number"
-                  value={callFormData.phoneNumber}
-                  onChange={(value) => handleCallFormChange("phoneNumber", value || "")}
-                  defaultCountry="US"
-                  international
-                  countryCallingCodeEditable={false}
-                  data-testid="input-phone"
+        <DialogContent className="w-[95%] max-w-lg mx-auto border-0 bg-white dark:bg-gray-900 shadow-2xl overflow-hidden p-0">
+          {/* Premium gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-900 dark:to-blue-950 opacity-50" />
+          
+          <div className="relative z-10">
+            {/* Header with modern design - no blue line */}
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-6">
+              <DialogHeader className="space-y-2">
+                <DialogTitle className="text-2xl font-bold text-white flex items-center gap-3">
+                  <div className="bg-white/20 backdrop-blur-sm p-2.5 rounded-xl">
+                    <Phone className="h-6 w-6 text-white" />
+                  </div>
+                  Experience Ruka AI Assistant
+                </DialogTitle>
+                <DialogDescription className="text-blue-50 text-base">
+                  Get an instant demo call from our intelligent AI agent
+                </DialogDescription>
+              </DialogHeader>
+            </div>
+            
+            {/* Form section with better spacing */}
+            <form onSubmit={handleCallFormSubmit} className="p-8 space-y-6">
+              {/* Name input field */}
+              <div className="space-y-2">
+                <label htmlFor="name" className="text-sm font-semibold text-gray-700 dark:text-gray-200 flex items-center gap-2">
+                  <User className="h-4 w-4 text-gray-500" />
+                  Your Name <span className="text-red-500">*</span>
+                </label>
+                <Input
+                  id="name"
+                  type="text"
+                  placeholder="John Doe"
+                  value={callFormData.name}
+                  onChange={(e) => handleCallFormChange("name", e.target.value)}
+                  className="h-12 text-base border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                  required
+                  data-testid="input-name"
                 />
               </div>
-              {phoneError && (
-                <p className="text-xs text-red-500" data-testid="text-phone-error">{phoneError}</p>
-              )}
-            </div>
+              
+              {/* Phone input with better styling */}
+              <div className="space-y-2">
+                <label htmlFor="phone" className="text-sm font-semibold text-gray-700 dark:text-gray-200 flex items-center gap-2">
+                  <Phone className="h-4 w-4 text-gray-500" />
+                  Phone Number <span className="text-red-500">*</span>
+                </label>
+                <div className="custom-phone-input">
+                  <PhoneInput
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    value={callFormData.phoneNumber}
+                    onChange={(value) => handleCallFormChange("phoneNumber", value || "")}
+                    defaultCountry="US"
+                    international
+                    countryCallingCodeEditable={false}
+                    className="phone-input-modern"
+                    data-testid="input-phone"
+                  />
+                </div>
+                {phoneError && (
+                  <p className="text-sm text-red-500 flex items-center gap-1 mt-2" data-testid="text-phone-error">
+                    <span className="text-xs">⚠</span> {phoneError}
+                  </p>
+                )}
+              </div>
+              
+              {/* Trust badges */}
+              <div className="flex items-center justify-center gap-6 py-3 text-xs text-gray-500 dark:text-gray-400">
+                <div className="flex items-center gap-1">
+                  <Shield className="h-3.5 w-3.5" />
+                  <span>Secure & Private</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Clock className="h-3.5 w-3.5" />
+                  <span>Instant Callback</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Zap className="h-3.5 w-3.5" />
+                  <span>AI Powered</span>
+                </div>
+              </div>
 
-            <Button
-              type="submit"
-              className="bg-blue-600 hover:bg-blue-700 text-white w-full py-3"
-              disabled={callRequestMutation.isPending}
-              data-testid="button-submit-call"
-            >
-              {callRequestMutation.isPending ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Calling you now...
-                </>
-              ) : (
-                <>
-                  <Phone className="mr-2 h-4 w-4" />
-                  Get AI Call Now
-                </>
-              )}
-            </Button>
-          </form>
+              {/* Submit button with premium styling */}
+              <Button
+                type="submit"
+                className="w-full h-14 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-200"
+                disabled={callRequestMutation.isPending}
+                data-testid="button-submit-call"
+              >
+                {callRequestMutation.isPending ? (
+                  <>
+                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                    Connecting you now...
+                  </>
+                ) : (
+                  <>
+                    <Sparkles className="mr-2 h-5 w-5" />
+                    Get Your AI Call Now
+                  </>
+                )}
+              </Button>
+              
+              {/* Footer text */}
+              <p className="text-center text-xs text-gray-500 dark:text-gray-400">
+                By requesting a call, you agree to our demo terms. No spam, ever.
+              </p>
+            </form>
+          </div>
         </DialogContent>
       </Dialog>
     </div>

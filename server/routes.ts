@@ -8,21 +8,35 @@ import { z } from "zod";
 const MCP_SERVER_URL = "https://superb-inspiration-production.up.railway.app";
 
 // Helper function to create a lead in Zoho CRM via MCP
-async function createZohoLead(phoneNumber: string, email?: string) {
+async function createZohoLead(name: string, phoneNumber: string, email?: string) {
   try {
     // Extract country code and format phone number
     // Phone numbers from the form are already in international format
     
-    // For now, we'll use "User" as lastName since we don't collect names
-    // You could parse this from email or ask for it in the form
+    // Split name into first and last name
+    // If only one name is provided, use it as lastName (since it's required)
+    const nameParts = name.trim().split(' ');
+    let firstName = "";
+    let lastName = "";
+    
+    if (nameParts.length === 1) {
+      // Single name - use as lastName since it's required
+      firstName = "";
+      lastName = nameParts[0];
+    } else {
+      // Multiple names - first as firstName, rest as lastName
+      firstName = nameParts[0];
+      lastName = nameParts.slice(1).join(' ');
+    }
+    
     const leadData = {
       jsonrpc: "2.0",
       method: "tools/call",
       params: {
         name: "zoho_create_lead",
         arguments: {
-          firstName: "",  // Optional, leaving empty
-          lastName: "Ruka Demo Request",  // Required field
+          firstName: firstName,
+          lastName: lastName,  // Required field
           email: email || undefined,
           phone: phoneNumber,
           company: "Via Ruka Website"  // Optional, adding context
@@ -99,6 +113,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Create a lead in Zoho CRM via MCP server
       // This will trigger the VAPI call automatically through the webhook
       const zohoResult = await createZohoLead(
+        (req.body as any).name || "Guest",
         validatedData.phoneNumber,
         validatedData.email || undefined
       );

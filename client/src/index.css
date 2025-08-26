@@ -482,7 +482,139 @@
   background-color: var(--electric-blue-dark);
 }
 
-/* Phone Input Styles */
+/* Modern Phone Input Styles */
+.custom-phone-input .PhoneInput {
+  display: flex;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.custom-phone-input .PhoneInputCountry {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.custom-phone-input .PhoneInputCountrySelect {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 0 3rem 0 1rem;
+  font-size: 1rem;
+  height: 3rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 7rem;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.custom-phone-input .PhoneInputCountrySelect:hover {
+  border-color: #3b82f6;
+  background: #f0f9ff;
+}
+
+.custom-phone-input .PhoneInputCountrySelect:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.custom-phone-input .PhoneInputCountrySelectArrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  color: #6b7280;
+  transition: transform 0.2s;
+}
+
+.custom-phone-input .PhoneInputCountrySelect:focus .PhoneInputCountrySelectArrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.custom-phone-input .PhoneInputCountryIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.custom-phone-input .PhoneInputCountryIcon--border {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.custom-phone-input .PhoneInputCountryIconImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-phone-input input.PhoneInputInput {
+  flex: 1;
+  height: 3rem;
+  border-radius: 0.75rem;
+  border: 2px solid #e5e7eb;
+  background-color: white;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  color: #111827;
+}
+
+.custom-phone-input input.PhoneInputInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.custom-phone-input input.PhoneInputInput::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.custom-phone-input input.PhoneInputInput:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background-color: #f9fafb;
+}
+
+/* Dark mode for custom phone input */
+.dark .custom-phone-input .PhoneInputCountrySelect {
+  background: #1f2937;
+  border-color: #374151;
+  color: #f3f4f6;
+}
+
+.dark .custom-phone-input .PhoneInputCountrySelect:hover {
+  background: #374151;
+  border-color: #3b82f6;
+}
+
+.dark .custom-phone-input input.PhoneInputInput {
+  background: #1f2937;
+  border-color: #374151;
+  color: #f3f4f6;
+}
+
+.dark .custom-phone-input input.PhoneInputInput:focus {
+  border-color: #3b82f6;
+}
+
+.dark .custom-phone-input input.PhoneInputInput::placeholder {
+  color: #6b7280;
+}
+
+/* Old Phone Input Styles (keeping for backward compatibility) */
 .phone-input-container .PhoneInput {
   display: flex;
   gap: 0.5rem;
