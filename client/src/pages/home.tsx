@@ -28,7 +28,6 @@ export default function Home() {
     email: ""
   });
   const [phoneError, setPhoneError] = useState("");
-  const [callEmailError, setCallEmailError] = useState("");
   const { toast } = useToast();
 
   const emailSubscriptionMutation = useMutation({
@@ -116,37 +115,26 @@ export default function Home() {
     
     // Reset errors
     setPhoneError("");
-    setCallEmailError("");
-    
-    let hasError = false;
     
     // Validate phone number
     if (!callFormData.phoneNumber) {
       setPhoneError("Phone number is required");
-      hasError = true;
+      return;
     } else if (!isValidPhoneNumber(callFormData.phoneNumber)) {
-      setPhoneError("Please enter a valid phone number with country code");
-      hasError = true;
+      setPhoneError("Please enter a valid phone number");
+      return;
     }
     
-    // Validate email
-    if (!callFormData.email) {
-      setCallEmailError("Email is required");
-      hasError = true;
-    } else if (!validateEmail(callFormData.email)) {
-      setCallEmailError("Please enter a valid email address");
-      hasError = true;
-    }
-    
-    if (!hasError) {
-      callRequestMutation.mutate(callFormData);
-    }
+    // Submit with phone number only (email optional)
+    callRequestMutation.mutate({
+      phoneNumber: callFormData.phoneNumber,
+      email: "" // Empty email since it's not required anymore
+    });
   };
 
   const handleCallFormChange = (field: string, value: string) => {
     setCallFormData(prev => ({ ...prev, [field]: value }));
     if (field === "phoneNumber") setPhoneError("");
-    if (field === "email") setCallEmailError("");
   };
 
   return (
@@ -430,22 +418,19 @@ export default function Home() {
                 <Phone className="h-5 w-5 text-blue-600 dark:text-blue-400" />
               </div>
               <span className="text-gray-900 dark:text-white font-bold text-center">
-                Schedule Business Demo
+                Experience Ruka AI
               </span>
             </DialogTitle>
             <DialogDescription className="text-center text-sm px-2">
-              Experience how Ruka can automate your sales outreach, customer support, and appointment scheduling with a live demo call.
+              Enter your phone number and let our AI agent call you immediately
             </DialogDescription>
           </DialogHeader>
           <form onSubmit={handleCallFormSubmit} className="space-y-4 px-2">
             <div className="space-y-2">
-              <label htmlFor="phone" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                Phone Number
-              </label>
               <div className={`phone-input-container ${phoneError ? "phone-input-error" : ""}`}>
                 <PhoneInput
                   id="phone"
-                  placeholder="Enter phone number"
+                  placeholder="Enter your phone number"
                   value={callFormData.phoneNumber}
                   onChange={(value) => handleCallFormChange("phoneNumber", value || "")}
                   defaultCountry="US"
@@ -457,67 +442,26 @@ export default function Home() {
               {phoneError && (
                 <p className="text-xs text-red-500" data-testid="text-phone-error">{phoneError}</p>
               )}
-              <p className="text-xs text-muted-foreground">
-                Select your country and enter your phone number
-              </p>
             </div>
 
-            <div className="space-y-2">
-              <label htmlFor="call-email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                Email Address
-              </label>
-              <div className="relative">
-                <Input
-                  id="call-email"
-                  type="email"
-                  placeholder="your@email.com"
-                  value={callFormData.email}
-                  onChange={(e) => handleCallFormChange("email", e.target.value)}
-                  className={`pr-10 ${
-                    callEmailError 
-                      ? "border-red-500 focus:ring-red-500" 
-                      : ""
-                  }`}
-                  data-testid="input-call-email"
-                />
-                <Mail className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
-              </div>
-              {callEmailError && (
-                <p className="text-xs text-red-500" data-testid="text-email-error">{callEmailError}</p>
+            <Button
+              type="submit"
+              className="bg-blue-600 hover:bg-blue-700 text-white w-full py-3"
+              disabled={callRequestMutation.isPending}
+              data-testid="button-submit-call"
+            >
+              {callRequestMutation.isPending ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Calling you now...
+                </>
+              ) : (
+                <>
+                  <Phone className="mr-2 h-4 w-4" />
+                  Get AI Call Now
+                </>
               )}
-            </div>
-
-            <DialogFooter className="gap-2 pt-2 flex-col-reverse sm:flex-row">
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => setIsCallDialogOpen(false)}
-                className="w-full sm:w-auto"
-                data-testid="button-cancel-call"
-              >
-                Cancel
-              </Button>
-              <Button
-                type="submit"
-                className="bg-blue-600 hover:bg-blue-700 text-white w-full sm:w-auto"
-                disabled={callRequestMutation.isPending}
-                data-testid="button-submit-call"
-              >
-                {callRequestMutation.isPending ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    <span className="hidden xs:inline">Connecting to Ruka...</span>
-                    <span className="xs:hidden">Connecting...</span>
-                  </>
-                ) : (
-                  <>
-                    <Phone className="mr-2 h-4 w-4" />
-                    <span className="hidden xs:inline">Request Demo Call</span>
-                    <span className="xs:hidden">Request Call</span>
-                  </>
-                )}
-              </Button>
-            </DialogFooter>
+            </Button>
           </form>
         </DialogContent>
       </Dialog>
