@@ -1,0 +1,44 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Deploy to EC2 via SSH
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.EC2_PRIVATE_KEY }}
+        port: ${{ secrets.EC2_PORT }}
+        script: |
+          # Navigate to the project directory
+          cd ~/ruka
+          
+          # Pull latest changes
+          git pull origin master
+          
+          # Install dependencies
+          npm install
+          
+          # Build the project
+          npm run build
+          
+          # Restart the application (using PM2)
+          pm2 restart ruka || pm2 start npm --name "ruka" -- start
+          
+          # Save PM2 process list
+          pm2 save
+          
+          # Optional: Reload Nginx if you're using it as reverse proxy
+          # sudo nginx -t && sudo systemctl reload nginx
