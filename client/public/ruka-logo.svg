@@ -1,0 +1,52 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient circle -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="innerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f472b6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer circle with gradient -->
+  <circle cx="100" cy="100" r="90" fill="url(#logoGradient)" filter="url(#shadow)"/>
+  
+  <!-- Inner design elements -->
+  <g filter="url(#glow)">
+    <!-- Stylized R with modern design -->
+    <path d="M60 140 L60 60 L110 60 C125 60 135 70 135 85 C135 100 125 110 110 110 L75 110 M95 110 L135 140" 
+          stroke="white" 
+          stroke-width="12" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none"
+          opacity="0.9"/>
+    
+    <!-- Decorative dot representing AI/voice -->
+    <circle cx="145" cy="85" r="8" fill="white" opacity="0.9">
+      <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.6;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Sound wave lines -->
+    <path d="M155 75 Q165 85 155 95" stroke="white" stroke-width="3" fill="none" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite" begin="0.2s"/>
+    </path>
+    <path d="M165 70 Q175 85 165 100" stroke="white" stroke-width="3" fill="none" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.2;0.5" dur="2s" repeatCount="indefinite" begin="0.4s"/>
+    </path>
+  </g>
+</svg>

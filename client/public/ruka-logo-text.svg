@@ -1,0 +1,48 @@
+<svg width="300" height="100" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Icon -->
+  <rect x="10" y="25" width="50" height="50" rx="12" fill="url(#textGradient)"/>
+  <path d="M25 60 L25 40 L37 40 C42 40 45 43 45 48 C45 53 42 56 37 56 L29 56 M34 56 L45 60" 
+        stroke="white" 
+        stroke-width="3" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none"/>
+  
+  <!-- Text "Ruka" -->
+  <text x="75" y="60" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="url(#textGradient)" filter="url(#textGlow)">
+    Ruka
+  </text>
+  
+  <!-- Tagline -->
+  <text x="75" y="75" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af">
+    AI Calling Agent
+  </text>
+  
+  <!-- Sound waves -->
+  <g opacity="0.6">
+    <path d="M220 45 Q230 50 220 55" stroke="url(#textGradient)" stroke-width="2" fill="none">
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M230 40 Q240 50 230 60" stroke="url(#textGradient)" stroke-width="2" fill="none">
+      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="2s" repeatCount="indefinite" begin="0.3s"/>
+    </path>
+    <path d="M240 35 Q250 50 240 65" stroke="url(#textGradient)" stroke-width="2" fill="none">
+      <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+    </path>
+  </g>
+</svg>

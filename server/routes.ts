@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertEmailSubscriptionSchema, insertCallRequestSchema } from "@shared/schema";
 import { z } from "zod";
+import { sendEmailNotification, formatEmailSubscriptionNotification, formatCallRequestNotification } from "./email";
 
 // MCP Server configuration
 const MCP_SERVER_URL = "https://superb-inspiration-production.up.railway.app";
@@ -85,6 +86,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
       
       const subscription = await storage.createEmailSubscription(validatedData);
+      
+      // Send email notification to hi@ruka.live
+      const emailContent = formatEmailSubscriptionNotification(validatedData.email);
+      await sendEmailNotification(
+        "New Email Subscription - Ruka Landing Page",
+        emailContent,
+        "hi@ruka.live"
+      );
+      
       res.status(201).json({ 
         message: "Successfully subscribed to updates",
         subscription: { email: subscription.email }
@@ -123,6 +133,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
       } else {
         console.log("Failed to create Zoho lead, but call request was saved");
       }
+      
+      // Send email notification to hi@ruka.live
+      const emailContent = formatCallRequestNotification(
+        (req.body as any).name || "Guest",
+        validatedData.phoneNumber,
+        validatedData.email || undefined
+      );
+      await sendEmailNotification(
+        "New Call Request - Ruka Landing Page",
+        emailContent,
+        "hi@ruka.live"
+      );
       
       res.status(201).json({ 
         message: "Call request received! Our AI agent will call you shortly.",

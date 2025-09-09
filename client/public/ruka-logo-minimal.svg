@@ -1,0 +1,22 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="minimalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded square background -->
+  <rect x="0" y="0" width="48" height="48" rx="12" fill="url(#minimalGradient)"/>
+  
+  <!-- Stylized R -->
+  <path d="M14 34 L14 14 L26 14 C31 14 34 17 34 22 C34 27 31 30 26 30 L18 30 M23 30 L34 34" 
+        stroke="white" 
+        stroke-width="3" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none"/>
+  
+  <!-- AI dot -->
+  <circle cx="36" cy="22" r="2" fill="white"/>
+</svg>

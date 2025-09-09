@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruka Logo Export for Google Ads</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .logo-container {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo-box {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+        .size-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #a855f7;
+            padding-bottom: 10px;
+        }
+        .instructions {
+            background: #f9f9ff;
+            border-left: 4px solid #a855f7;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .white-bg {
+            background: white;
+            padding: 20px;
+            display: inline-block;
+        }
+        .transparent-bg {
+            background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), 
+                            linear-gradient(-45deg, #ccc 25%, transparent 25%), 
+                            linear-gradient(45deg, transparent 75%, #ccc 75%), 
+                            linear-gradient(-45deg, transparent 75%, #ccc 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            padding: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ruka Logo Export for Google Ads</h1>
+    
+    <div class="instructions">
+        <h3>📌 How to save as PNG:</h3>
+        <ol>
+            <li>Right-click on any logo below</li>
+            <li>Select "Save Image As..."</li>
+            <li>Save as PNG format</li>
+            <li>Upload to Google Ads</li>
+        </ol>
+        <p><strong>Alternative:</strong> Take a screenshot of the logos you need</p>
+    </div>
+
+    <div class="logo-container">
+        <h2>Square Logo (For Display Ads)</h2>
+        <div class="logo-box">
+            <div class="white-bg">
+                <img src="ruka-logo.svg" width="512" height="512" alt="Ruka Logo 512x512">
+            </div>
+            <div class="size-label">512x512 (High-res square)</div>
+        </div>
+        <div class="logo-box">
+            <div class="white-bg">
+                <img src="ruka-logo.svg" width="200" height="200" alt="Ruka Logo 200x200">
+            </div>
+            <div class="size-label">200x200 (Standard square)</div>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <h2>Minimal Logo (For Small Ads)</h2>
+        <div class="logo-box">
+            <div class="white-bg">
+                <img src="ruka-logo-minimal.svg" width="128" height="128" alt="Ruka Minimal 128x128">
+            </div>
+            <div class="size-label">128x128</div>
+        </div>
+        <div class="logo-box">
+            <div class="white-bg">
+                <img src="ruka-logo-minimal.svg" width="64" height="64" alt="Ruka Minimal 64x64">
+            </div>
+            <div class="size-label">64x64</div>
+        </div>
+        <div class="logo-box">
+            <div class="white-bg">
+                <img src="ruka-logo-minimal.svg" width="48" height="48" alt="Ruka Minimal 48x48">
+            </div>
+            <div class="size-label">48x48</div>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <h2>Logo with Text (For Banner Ads)</h2>
+        <div class="logo-box">
+            <div class="white-bg">
+                <img src="ruka-logo-text.svg" width="300" height="100" alt="Ruka Text Logo">
+            </div>
+            <div class="size-label">300x100</div>
+        </div>
+        <div class="logo-box">
+            <div class="white-bg">
+                <img src="ruka-logo-text.svg" width="728" height="90" alt="Ruka Text Logo Banner">
+            </div>
+            <div class="size-label">728x90 (Leaderboard)</div>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <h2>Transparent Background Versions</h2>
+        <div class="logo-box">
+            <div class="transparent-bg">
+                <img src="ruka-logo-minimal.svg" width="128" height="128" alt="Ruka Transparent">
+            </div>
+            <div class="size-label">128x128 (Transparent)</div>
+        </div>
+        <div class="logo-box">
+            <div class="transparent-bg">
+                <img src="ruka-logo.svg" width="200" height="200" alt="Ruka Transparent Large">
+            </div>
+            <div class="size-label">200x200 (Transparent)</div>
+        </div>
+    </div>
+
+    <div class="logo-container">
+        <h2>Google Ads Recommended Sizes</h2>
+        <p>✅ <strong>Square and rectangle:</strong> 200×200, 240×400, 250×250, 250×360, 300×250, 336×280, 580×400</p>
+        <p>✅ <strong>Skyscraper:</strong> 120×600, 160×600, 300×600, 300×1050</p>
+        <p>✅ <strong>Leaderboard:</strong> 468×60, 728×90, 930×180, 970×90, 970×250, 980×120</p>
+        <p>✅ <strong>Mobile:</strong> 300×50, 320×50, 320×100</p>
+    </div>
+
+    <script>
+        // Allow right-click save on SVG images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('contextmenu', (e) => {
+                e.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -7,3 +7,36 @@ vite.config.ts.*
 .env
 .env.local
 .env.*.local
+
+# Logs
+*.log
+logs/
+server.log
+
+# Backup files
+*.backup
+*.backup[0-9]
+client/src/pages/*.backup*
+
+# Brochure and marketing files
+*brochure.html
+*brochure.pdf
+*.pdf
+
+# Video files
+*.mp4
+*.mov
+*.avi
+
+# Test files
+test-email*
+
+# Service files
+*.pid
+*.service
+
+# WhatsApp integration specific
+whatsapp-integration/logs/
+whatsapp-integration/dist/
+whatsapp-integration/node_modules/
+whatsapp-integration/*.pid
