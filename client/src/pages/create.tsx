@@ -214,11 +214,14 @@ export default function Home() {
                 <span className="font-bold text-base sm:text-lg bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Ruka Create</span>
               </div>
             </div>
-            <div className="hidden sm:flex items-center gap-2 text-xs text-white/50">
-              <div className="flex items-center gap-1">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span>AI Ready</span>
-              </div>
+            <div className="hidden sm:flex items-center gap-2">
+              <Button
+                onClick={() => setIsCallDialogOpen(true)}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-4 py-2 rounded-full font-medium text-sm shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <Phone className="h-4 w-4 mr-2" />
+                Call Ruka Now
+              </Button>
             </div>
           </div>
         </div>
@@ -267,8 +270,8 @@ export default function Home() {
               <p className="text-xl sm:text-2xl text-gray-300 font-semibold">
                 Describe it. Deploy it. Done.
               </p>
-              <p className="text-sm sm:text-base text-gray-500 max-w-xl mx-auto">
-                Create AI voice agents that work while you sleep. No code required.
+              <p className="text-sm sm:text-base text-gray-400 max-w-xl mx-auto">
+                Create AI agents that answer phone calls, book appointments, qualify leads, and handle customer support - all in your brand's voice.
               </p>
             </div>
           </div>
@@ -317,6 +320,28 @@ export default function Home() {
                     Create My Agent
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Transparent Pricing Model */}
+          <div className="mt-10 flex justify-center">
+            <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-4">
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-400" />
+                  <span className="text-sm font-medium text-gray-200">No Setup Fees</span>
+                </div>
+                <div className="h-4 w-px bg-gray-600"></div>
+                <div className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-400" />
+                  <span className="text-sm font-medium text-gray-200">No Hidden Costs</span>
+                </div>
+                <div className="h-4 w-px bg-gray-600"></div>
+                <div className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-400" />
+                  <span className="text-sm font-medium text-gray-200">Pay As You Go</span>
                 </div>
               </div>
             </div>
@@ -535,76 +560,113 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials - Clean and Simple */}
-      <section className="relative z-10 py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Loved by Innovators
+      {/* Core Capabilities - Professional */}
+      <section className="relative z-10 py-20 px-4 bg-black/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Enterprise-Grade Voice AI Platform
             </h2>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              Deploy intelligent voice agents that scale with your business needs
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-black/40 backdrop-blur-xl border border-white/10 rounded-xl p-6 shadow-sm">
-              <div className="flex items-center space-x-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gray-900/50 backdrop-blur-xl border border-gray-800 rounded-lg p-8 hover:border-gray-700 transition-colors">
+              <div className="w-14 h-14 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6">
+                <Rocket className="h-7 w-7 text-blue-400" />
               </div>
-              <p className="text-gray-300 mb-4">
-                "I just described what I needed and Ruka built it perfectly. My appointment no-shows dropped by 80%."
+              <h3 className="text-xl font-semibold text-white mb-3">Instant Deployment</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Go from concept to live agent in under a minute. No technical setup, no complex configurations.
               </p>
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full"></div>
-                <div>
-                  <p className="font-semibold text-white">Dr. Sarah Miller</p>
-                  <p className="text-sm text-gray-400">Dental Practice Owner</p>
-                </div>
-              </div>
             </div>
             
-            <div className="bg-black/40 backdrop-blur-xl border border-white/10 rounded-xl p-6 shadow-sm">
-              <div className="flex items-center space-x-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
+            <div className="bg-gray-900/50 backdrop-blur-xl border border-gray-800 rounded-lg p-8 hover:border-gray-700 transition-colors">
+              <div className="w-14 h-14 bg-purple-500/10 rounded-lg flex items-center justify-center mb-6">
+                <Brain className="h-7 w-7 text-purple-400" />
               </div>
-              <p className="text-gray-300 mb-4">
-                "Our agent qualifies leads 24/7. It's like having a sales team that never sleeps."
+              <h3 className="text-xl font-semibold text-white mb-3">Advanced AI Models</h3>
+              <p className="text-gray-400 leading-relaxed">
+                State-of-the-art language models ensure natural, context-aware conversations every time.
               </p>
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full"></div>
-                <div>
-                  <p className="font-semibold text-white">Alex Chen</p>
-                  <p className="text-sm text-gray-400">SaaS Founder</p>
-                </div>
+            </div>
+            
+            <div className="bg-gray-900/50 backdrop-blur-xl border border-gray-800 rounded-lg p-8 hover:border-gray-700 transition-colors">
+              <div className="w-14 h-14 bg-green-500/10 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="h-7 w-7 text-green-400" />
               </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Enterprise Security</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Bank-level encryption, data isolation, and compliance with global privacy standards.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer with Ruka Theme */}
-      <footer className="relative z-10 py-12 px-4 border-t border-white/10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/ruka-logo-minimal.svg" 
-              alt="Ruka Logo" 
-              className="w-10 h-10"
-            />
-            <span className="font-bold text-lg text-white">Ruka</span>
+      {/* Professional Footer */}
+      <footer className="relative z-10 pt-16 pb-8 px-4 bg-black/50 border-t border-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-5 gap-8 mb-12">
+            <div className="md:col-span-2">
+              <div className="flex items-center space-x-3 mb-4">
+                <img 
+                  src="/ruka-logo-minimal.svg" 
+                  alt="Ruka" 
+                  className="w-10 h-10"
+                />
+                <div>
+                  <span className="font-bold text-xl text-white">Ruka</span>
+                  <p className="text-xs text-gray-500">Voice AI Platform</p>
+                </div>
+              </div>
+              <p className="text-sm text-gray-400 max-w-xs">
+                Creating intelligent voice agents that understand, engage, and deliver results for businesses worldwide.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Product</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Features</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Use Cases</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Integrations</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">API</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Resources</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Support</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Status</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Company</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                <li><a href="mailto:hi@ruka.live" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Partners</a></li>
+              </ul>
+            </div>
           </div>
-          <p className="text-sm text-gray-400">
-            © 2025 Ruka. Making AI voice agents lovable 💕
-          </p>
-          <div className="flex items-center space-x-6 text-sm text-gray-400">
-            <a href="mailto:hi@ruka.live" className="hover:text-purple-400 transition-colors flex items-center gap-1">
-              <Mail className="h-4 w-4" />
-              hi@ruka.live
-            </a>
-            <a href="#" className="hover:text-purple-400 transition-colors">Privacy</a>
-            <a href="#" className="hover:text-purple-400 transition-colors">Terms</a>
+          
+          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
+            <p className="text-sm text-gray-500">
+              © 2024 Ruka Technologies, Inc. All rights reserved.
+            </p>
+            <div className="flex items-center space-x-6 text-sm text-gray-500 mt-4 md:mt-0">
+              <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-gray-300 transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-gray-300 transition-colors">Cookie Policy</a>
+            </div>
           </div>
         </div>
       </footer>

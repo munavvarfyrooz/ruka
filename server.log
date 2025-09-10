@@ -2023,3 +2023,13 @@ Node.js v18.19.1
 > NODE_ENV=production node dist/index.js
 
 8:05:04 AM [express] serving on port 8080
+Error: ENOENT: no such file or directory, stat '/home/ubuntu/ruka/AIAgentLanding/dist/public/index.html'
+Error: ENOENT: no such file or directory, stat '/home/ubuntu/ruka/AIAgentLanding/dist/public/index.html'
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757495644748,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <c5e3f472-6112-ab76-a1e6-2c0e057fd06d@ruka.live>
+9:14:08 AM [express] POST /api/call-request 201 in 3551ms :: {"message":"Call request received! Our …
