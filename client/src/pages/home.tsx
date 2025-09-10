@@ -631,42 +631,35 @@ export default function Home() {
             <div>
               <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Product</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Features</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Use Cases</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Integrations</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">API</a></li>
+                <li><span className="text-gray-400">Features</span></li>
+                <li><span className="text-gray-400">Use Cases</span></li>
+                <li><span className="text-gray-400">API Coming Soon</span></li>
               </ul>
             </div>
             
             <div>
               <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Resources</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Support</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Status</a></li>
+                <li><span className="text-gray-400">Documentation</span></li>
+                <li><span className="text-gray-400">Blog Coming Soon</span></li>
               </ul>
             </div>
             
             <div>
               <h4 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Company</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
                 <li><a href="mailto:hi@ruka.live" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Partners</a></li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
             <p className="text-sm text-gray-500">
-              © 2024 Ruka Technologies, Inc. All rights reserved.
+              © 2024 Ruka Technologies. All rights reserved.
             </p>
             <div className="flex items-center space-x-6 text-sm text-gray-500 mt-4 md:mt-0">
-              <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-gray-300 transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-gray-300 transition-colors">Cookie Policy</a>
+              <span className="text-gray-500">Privacy Policy</span>
+              <span className="text-gray-500">Terms of Service</span>
             </div>
           </div>
         </div>
