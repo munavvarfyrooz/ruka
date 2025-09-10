@@ -1,15 +1,967 @@
 
-> rest-express@1.0.0 dev
-> NODE_ENV=development tsx server/index.ts
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
 
-5:53:15 PM [express] serving on port 8080
-Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
-  npx update-browserslist-db@latest
-  Why you should do it regularly: https://github.com/browserslist/update-db#readme
-5:56:23 PM [vite] hmr update /src/index.css?v=ISz0k4c9-DPD8Tmj8auvw
-5:56:48 PM [vite] hmr update /src/index.css?v=ISz0k4c9-DPD8Tmj8auvw
-5:56:58 PM [vite] page reload index.html
-5:59:41 PM [vite] hmr update /src/pages/home.tsx, /src/index.css?v=ISz0k4c9-DPD8Tmj8auvw
-6:00:05 PM [vite] hmr update /src/pages/home.tsx, /src/index.css?v=ISz0k4c9-DPD8Tmj8auvw
-6:42:52 PM [express] POST /api/call-request 201 in 6ms :: {"message":"Call request received! Our AI …
-6:43:15 PM [express] POST /api/email-subscription 201 in 2ms :: {"message":"Successfully subscribed …
+node:events:495
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 0.0.0.0:8080
+    at Server.setupListenHandle [as _listen2] (node:net:1811:16)
+    at listenInCluster (node:net:1859:12)
+    at doListen (node:net:2008:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1838:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 8080
+}
+
+Node.js v18.19.1
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+11:05:36 AM [express] serving on port 8080
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756469041893,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email credentials not configured. Email notifications will be disabled.
+Set EMAIL_USER and EMAIL_PASS environment variables to enable email notifications.
+Email notification skipped - email service not configured
+12:04:02 PM [express] POST /api/call-request 201 in 1025ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756475763222,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email credentials not configured. Email notifications will be disabled.
+Set EMAIL_USER and EMAIL_PASS environment variables to enable email notifications.
+Email notification skipped - email service not configured
+1:56:04 PM [express] POST /api/call-request 201 in 916ms :: {"message":"Call request received! Our A…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756475979183,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email credentials not configured. Email notifications will be disabled.
+Set EMAIL_USER and EMAIL_PASS environment variables to enable email notifications.
+Email notification skipped - email service not configured
+1:59:39 PM [express] POST /api/call-request 201 in 766ms :: {"message":"Call request received! Our A…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756476718912,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email credentials not configured. Email notifications will be disabled.
+Set EMAIL_USER and EMAIL_PASS environment variables to enable email notifications.
+Email notification skipped - email service not configured
+2:11:59 PM [express] POST /api/call-request 201 in 784ms :: {"message":"Call request received! Our A…
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+3:02:43 PM [express] serving on port 8080
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756482142356,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email credentials not configured. Email notifications will be disabled.
+Set EMAIL_USER and EMAIL_PASS environment variables to enable email notifications.
+Email notification skipped - email service not configured
+3:42:23 PM [express] POST /api/call-request 201 in 1028ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756484974061,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email credentials not configured. Email notifications will be disabled.
+Set EMAIL_USER and EMAIL_PASS environment variables to enable email notifications.
+Email notification skipped - email service not configured
+4:29:34 PM [express] POST /api/call-request 201 in 748ms :: {"message":"Call request received! Our A…
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+7:19:42 AM [express] serving on port 8080
+Email credentials not configured. Email notifications will be disabled.
+Set EMAIL_USER and EMAIL_PASS environment variables to enable email notifications.
+Email notification skipped - email service not configured
+7:20:06 AM [express] POST /api/email-subscription 201 in 8ms :: {"message":"Successfully subscribed …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756549891603,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email credentials not configured. Email notifications will be disabled.
+Set EMAIL_USER and EMAIL_PASS environment variables to enable email notifications.
+Email notification skipped - email service not configured
+10:31:32 AM [express] POST /api/call-request 201 in 903ms :: {"message":"Call request received! Our A…
+10:39:24 AM [express] POST /api/email-subscription 409 in 1ms :: {"message":"Email already subscribed…
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+10:42:42 AM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+10:53:08 AM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+10:53:40 AM [express] serving on port 8080
+Email notification sent: <087732bf-9afc-e3bf-3326-fda448dfc057@ruka.live>
+10:54:25 AM [express] POST /api/email-subscription 201 in 1405ms :: {"message":"Successfully subscrib…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756551321937,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <83dccd36-d52d-3e05-26da-59bb30064255@ruka.live>
+10:55:23 AM [express] POST /api/call-request 201 in 1103ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756552194918,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <7f438926-2b4d-015e-f959-ad07179d0611@ruka.live>
+11:09:56 AM [express] POST /api/call-request 201 in 1728ms :: {"message":"Call request received! Our …
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+11:43:43 AM [express] serving on port 8080
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756554276779,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <02deab9e-38ec-2bd9-a196-1ac25e37928e@ruka.live>
+11:44:39 AM [express] POST /api/call-request 201 in 2463ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756557898467,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <27ce370d-58c8-ac99-2845-5c017b1bb731@ruka.live>
+12:44:59 PM [express] POST /api/call-request 201 in 1131ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756558860227,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <ea84caa9-8cfa-a332-d54a-3c75430a4543@ruka.live>
+1:01:01 PM [express] POST /api/call-request 201 in 1110ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756558977359,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <a346c3f6-f1fd-731c-7a0b-ab85c9a87e36@ruka.live>
+1:02:58 PM [express] POST /api/call-request 201 in 1070ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756566800879,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <f4b0caa7-a7c7-d6a9-4b76-6cf1837603c3@ruka.live>
+3:13:21 PM [express] POST /api/call-request 201 in 1023ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756611266671,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <a481e64a-74bf-76e3-3509-e966ed46935f@ruka.live>
+3:34:28 AM [express] POST /api/call-request 201 in 1352ms :: {"message":"Call request received! Our …
+Email notification sent: <28e92219-f581-4cca-07df-19d0ad910625@ruka.live>
+10:09:49 AM [express] POST /api/email-subscription 201 in 802ms :: {"message":"Successfully subscribe…
+11:01:33 AM [express] POST /api/email-subscription 409 in 1ms :: {"message":"Email already subscribed…
+Email notification sent: <96eb2cb9-954a-1b0a-7bcf-988a5833de43@ruka.live>
+11:01:50 AM [express] POST /api/email-subscription 201 in 448ms :: {"message":"Successfully subscribe…
+Email notification sent: <2eeb667c-e4a3-ce68-e68e-fd58be3d0feb@ruka.live>
+11:02:05 AM [express] POST /api/email-subscription 201 in 1240ms :: {"message":"Successfully subscrib…
+11:02:15 AM [express] POST /api/email-subscription 409 in 1ms :: {"message":"Email already subscribed…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756726830786,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <abb30c7a-f5f0-1823-64ae-8d21852fd4a9@ruka.live>
+11:40:32 AM [express] POST /api/call-request 201 in 1890ms :: {"message":"Call request received! Our …
+12:04:58 PM [express] POST /api/email-subscription 409 in 1ms :: {"message":"Email already subscribed…
+Terminated
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+3:20:04 PM [express] serving on port 8080
+Terminated
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+3:44:39 PM [express] serving on port 8080
+Terminated
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+4:00:20 PM [express] serving on port 8080
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756792394425,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <b6432d1d-5251-c4dc-a4ef-0d447856ecd6@ruka.live>
+5:53:15 AM [express] POST /api/call-request 201 in 1309ms :: {"message":"Call request received! Our …
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+6:04:09 AM [express] serving on port 8080
+Terminated
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+8:24:41 AM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+8:27:48 AM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+8:32:31 AM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+8:32:53 AM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+8:51:44 AM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+8:54:54 AM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+8:55:47 AM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+9:00:18 AM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+9:02:30 AM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+12:37:57 PM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+1:07:47 PM [express] serving on port 8080
+Terminated
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+1:20:40 PM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+1:33:28 PM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+2:42:13 PM [express] serving on port 8080
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+3:03:56 PM [express] serving on port 8080
+12:13:01 AM [express] GET /api/sonicos/auth 200 in 1ms
+12:13:01 AM [express] GET /api/sonicos/tfa 200 in 2ms
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756891372234,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <078be580-eb60-de1a-ca0f-0f37f909009d@ruka.live>
+9:22:53 AM [express] POST /api/call-request 201 in 1410ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756895130312,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <a14213e9-0f20-4106-1bbb-0d287bcba854@ruka.live>
+10:25:32 AM [express] POST /api/call-request 201 in 2100ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756895471007,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <01cb7a0d-13c5-b063-3f0a-a9a4935e6df9@ruka.live>
+10:31:11 AM [express] POST /api/call-request 201 in 970ms :: {"message":"Call request received! Our A…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756895535609,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <754590a6-c274-dc5f-0b01-2d14fa3fe7e7@ruka.live>
+10:32:16 AM [express] POST /api/call-request 201 in 926ms :: {"message":"Call request received! Our A…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756895573478,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <48620251-b5b9-c296-491b-8c5e9100b9e4@ruka.live>
+10:32:54 AM [express] POST /api/call-request 201 in 1402ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1756971953911,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <a34546cf-1036-9d8c-33d8-f94409a2f9c3@ruka.live>
+7:45:55 AM [express] POST /api/call-request 201 in 1202ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757011351241,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <843a0931-df86-3b97-ead5-3d5592ed24bd@ruka.live>
+6:42:32 PM [express] POST /api/call-request 201 in 1470ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757079786336,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <1684e9f2-25c1-9864-ed41-5ed3bf3d7360@ruka.live>
+1:43:08 PM [express] POST /api/call-request 201 in 1906ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757080882154,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <be8e0a36-0a0c-2073-712a-498fbf1d7729@ruka.live>
+2:01:24 PM [express] POST /api/call-request 201 in 2304ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757081014989,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <1bf94c45-9182-0c2d-988a-588ebf1625d2@ruka.live>
+2:03:36 PM [express] POST /api/call-request 201 in 1146ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757083115477,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <d6e8ec13-7259-b261-d4a2-f5d1003f5b64@ruka.live>
+2:38:36 PM [express] POST /api/call-request 201 in 1307ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757086324418,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <d906f850-b35b-5bd9-78d5-074c75379327@ruka.live>
+3:32:05 PM [express] POST /api/call-request 201 in 1236ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757087032244,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <655184e6-447a-0c75-73e1-7acab01a3d52@ruka.live>
+3:43:53 PM [express] POST /api/call-request 201 in 1028ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757087850308,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <e1f7a728-b2eb-6b65-3596-173e5558472c@ruka.live>
+3:57:32 PM [express] POST /api/call-request 201 in 1825ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757088707082,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <45844122-f9cc-16d2-0cc5-10e06c3affa8@ruka.live>
+4:11:48 PM [express] POST /api/call-request 201 in 1530ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757088761491,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <5ef7da9a-83b5-0e08-ce17-d138d8d969dc@ruka.live>
+4:12:42 PM [express] POST /api/call-request 201 in 1207ms :: {"message":"Call request received! Our …
+Email notification sent: <9fe7ded1-d80a-7036-6657-3e42963f5eae@ruka.live>
+4:13:13 PM [express] POST /api/email-subscription 201 in 658ms :: {"message":"Successfully subscribe…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757088835176,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <5bb169d0-9d37-d0cd-a30b-ee54b6d8829c@ruka.live>
+4:13:56 PM [express] POST /api/call-request 201 in 1236ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757089039067,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <65b0d809-59e9-e0c2-8613-5696d6eab8e7@ruka.live>
+4:17:19 PM [express] POST /api/call-request 201 in 916ms :: {"message":"Call request received! Our A…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757089089037,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <08bde8f9-ded5-ddaa-4bbc-95cf726e6b29@ruka.live>
+4:18:09 PM [express] POST /api/call-request 201 in 896ms :: {"message":"Call request received! Our A…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757089165592,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <dc52a9d4-cd1e-e310-c19c-596c0059b5d8@ruka.live>
+4:19:27 PM [express] POST /api/call-request 201 in 1645ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757090500382,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <430a5176-e548-8a2b-ae4a-3eef2d203aae@ruka.live>
+4:41:42 PM [express] POST /api/call-request 201 in 1914ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757090514728,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <b73cf532-2895-ff8c-a147-608e9e80a656@ruka.live>
+4:41:55 PM [express] POST /api/call-request 201 in 985ms :: {"message":"Call request received! Our A…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757090582280,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <34353fb2-83e4-2fe7-0e4f-13a06c337b5b@ruka.live>
+4:43:03 PM [express] POST /api/call-request 201 in 1100ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757091128423,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <1342da87-29d5-3478-2c9e-929f1d193ea9@ruka.live>
+4:52:10 PM [express] POST /api/call-request 201 in 1623ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757091228227,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <ad9df0d8-dfac-c0ea-866e-656f529b07f8@ruka.live>
+4:53:49 PM [express] POST /api/call-request 201 in 806ms :: {"message":"Call request received! Our A…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757091279944,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <5f5d44c5-9cb1-033d-edc6-a0613e17b308@ruka.live>
+4:54:41 PM [express] POST /api/call-request 201 in 1068ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757091485638,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <4a790e7c-e51f-20de-4658-6bf56ef23b31@ruka.live>
+4:58:06 PM [express] POST /api/call-request 201 in 1099ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757091537775,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <eedab0a3-0375-da92-e11c-9583efb69a37@ruka.live>
+4:58:58 PM [express] POST /api/call-request 201 in 1052ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757092501212,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <1ce6ccb5-0ad0-c3cc-4ec9-7a691f2b1885@ruka.live>
+5:15:02 PM [express] POST /api/call-request 201 in 1238ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757092508175,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <33174f24-20d6-e4a9-8c45-acdc7825be9a@ruka.live>
+5:15:09 PM [express] POST /api/call-request 201 in 1162ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757092572634,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <c908e668-ad0f-5243-b12e-555013233755@ruka.live>
+5:16:14 PM [express] POST /api/call-request 201 in 1817ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757092746945,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <09eb7641-d1b7-b60d-429b-dff44f3110e7@ruka.live>
+5:19:07 PM [express] POST /api/call-request 201 in 913ms :: {"message":"Call request received! Our A…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757093291063,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <84ce9530-bc12-9dc4-e738-38806cddba27@ruka.live>
+5:28:11 PM [express] POST /api/call-request 201 in 845ms :: {"message":"Call request received! Our A…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757093361849,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <a2f8f21b-0479-4977-842b-adf72006256a@ruka.live>
+5:29:22 PM [express] POST /api/call-request 201 in 925ms :: {"message":"Call request received! Our A…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757093922839,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <10e13c35-ff6d-b7e9-7dbd-c8bcc3be6b78@ruka.live>
+5:38:44 PM [express] POST /api/call-request 201 in 2144ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757093993959,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <4f2a72a6-a6bc-4c29-a515-113195d18430@ruka.live>
+5:39:54 PM [express] POST /api/call-request 201 in 1004ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757094029754,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <4b158d6e-8fd9-33a6-8dea-793fbd053b05@ruka.live>
+5:40:31 PM [express] POST /api/call-request 201 in 1354ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757094983231,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <f749c82a-16f4-bcc8-5186-551ad3950cfa@ruka.live>
+5:56:25 PM [express] POST /api/call-request 201 in 1970ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757095318537,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <4bb7538f-f445-578d-5dbd-744c2147504c@ruka.live>
+6:02:00 PM [express] POST /api/call-request 201 in 1507ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757095368218,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <6d3c191a-db01-bfee-bb33-6bad1b8396cf@ruka.live>
+6:02:49 PM [express] POST /api/call-request 201 in 910ms :: {"message":"Call request received! Our A…
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757095593491,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <d80ef07c-28ff-d25f-43c7-991d312e96f6@ruka.live>
+6:06:34 PM [express] POST /api/call-request 201 in 1038ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757097239174,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <fcab76ad-4c63-1577-6174-70b0b51283f7@ruka.live>
+6:34:01 PM [express] POST /api/call-request 201 in 2239ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757097294835,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <24bdf7db-259c-6448-c41c-f108864497ee@ruka.live>
+6:34:56 PM [express] POST /api/call-request 201 in 1219ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757097337213,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <63a35b26-06a6-0ebb-7245-d82804031403@ruka.live>
+6:35:38 PM [express] POST /api/call-request 201 in 1126ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757098204852,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <a88a2f97-10d0-acac-2e28-472e9c1363be@ruka.live>
+6:50:06 PM [express] POST /api/call-request 201 in 1770ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757098791280,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <cd478b44-f766-5821-1d33-6abc90b0f06a@ruka.live>
+6:59:52 PM [express] POST /api/call-request 201 in 1147ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757099576177,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <545dc0b5-2c5d-f22b-c154-150d3658f2d0@ruka.live>
+7:12:58 PM [express] POST /api/call-request 201 in 1895ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757099776852,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <af492e07-c8dd-280a-8f72-4380b44e0643@ruka.live>
+7:16:17 PM [express] POST /api/call-request 201 in 1088ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757100028702,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <2823a31f-0749-c3f2-6938-a4fd0b3cfef1@ruka.live>
+7:20:30 PM [express] POST /api/call-request 201 in 1978ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757100092397,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <6f43d0ca-0cc4-beae-c07d-6f083179eee0@ruka.live>
+7:21:33 PM [express] POST /api/call-request 201 in 1119ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757132581659,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <4b74b3e3-4a0b-f9a9-63ed-d722ef0325fa@ruka.live>
+4:23:03 AM [express] POST /api/call-request 201 in 1705ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757137038983,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <0c10006b-80e4-f157-057a-ca805a30a80f@ruka.live>
+5:37:20 AM [express] POST /api/call-request 201 in 1521ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757137203777,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <58919d45-c816-9205-51db-2e85f0ad101e@ruka.live>
+5:40:06 AM [express] POST /api/call-request 201 in 2235ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757152268222,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <48aee90f-85dd-1024-393e-364d2de6cd51@ruka.live>
+9:51:09 AM [express] POST /api/call-request 201 in 1692ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757155048148,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <d2b224af-34cf-b3b8-52b0-dcb045171421@ruka.live>
+10:37:31 AM [express] POST /api/call-request 201 in 3302ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757173735228,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <bbc065b1-7251-3058-a55f-f7e574f22017@ruka.live>
+3:48:56 PM [express] POST /api/call-request 201 in 1455ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757173899948,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <b02a89ef-1f3d-b47e-39bb-541a3802c2a6@ruka.live>
+3:51:41 PM [express] POST /api/call-request 201 in 1257ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757176393750,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <c668bd99-1fba-8673-1615-c095f3788128@ruka.live>
+4:33:15 PM [express] POST /api/call-request 201 in 2053ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757176429817,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <8062fbb4-7efb-1afe-efef-bab80a11ddae@ruka.live>
+4:33:50 PM [express] POST /api/call-request 201 in 1007ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757176486755,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <1ffafe37-11f9-f1f4-ec9b-ce5e9fc6d27e@ruka.live>
+4:34:47 PM [express] POST /api/call-request 201 in 1086ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757183171865,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <497cbe51-a9b7-37db-5cbc-1ba430293823@ruka.live>
+6:26:13 PM [express] POST /api/call-request 201 in 1918ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757183512342,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <e58ea75a-1bfe-362f-970b-83dd4bff7e50@ruka.live>
+6:31:54 PM [express] POST /api/call-request 201 in 1824ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757197642225,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <bc3aafab-fc11-2642-2907-3e8421a8ee8d@ruka.live>
+10:27:24 PM [express] POST /api/call-request 201 in 2130ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757228439612,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <c74ff1f4-03ad-e0dd-a68b-0187de61d6a7@ruka.live>
+7:00:41 AM [express] POST /api/call-request 201 in 2099ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757229663536,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <b9aec454-c406-2666-acc9-7cb6f1f1ed0a@ruka.live>
+7:21:05 AM [express] POST /api/call-request 201 in 1825ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757231040507,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <a64e53ce-297b-7b4d-ad47-572ebc758182@ruka.live>
+7:44:02 AM [express] POST /api/call-request 201 in 2286ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757233981121,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <3e4da21b-e5b4-2c7b-e074-b05fef91144b@ruka.live>
+8:33:02 AM [express] POST /api/call-request 201 in 1305ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757238059549,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <37b557d0-33d5-2b78-f56f-8ddc4f55c9e0@ruka.live>
+9:41:00 AM [express] POST /api/call-request 201 in 1306ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757238076899,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <02e4ae7e-d99c-7216-5978-88506bb34cb8@ruka.live>
+9:41:18 AM [express] POST /api/call-request 201 in 1774ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757241149046,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <8f832b1f-de49-caae-ffca-110cd69431f7@ruka.live>
+10:32:30 AM [express] POST /api/call-request 201 in 1014ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757241497971,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <b81e6bf0-1ae6-81e0-81a4-6ca9c534a539@ruka.live>
+10:38:19 AM [express] POST /api/call-request 201 in 1667ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757256786347,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <700a9073-f429-a3db-6df2-4e5cab03908a@ruka.live>
+2:53:08 PM [express] POST /api/call-request 201 in 2302ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757265746044,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <e0d24847-c1a9-f0f7-d485-e468523aa1ed@ruka.live>
+5:22:27 PM [express] POST /api/call-request 201 in 1231ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757265855483,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <bc42fc8f-256c-1a41-f515-3fd732e49b10@ruka.live>
+5:24:17 PM [express] POST /api/call-request 201 in 1834ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757266591037,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <dda5d78c-031b-5568-4748-577c29c91bdd@ruka.live>
+5:36:33 PM [express] POST /api/call-request 201 in 2080ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757266625709,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <c93b936e-5f36-0ce8-d33b-ecc4017bed60@ruka.live>
+5:37:06 PM [express] POST /api/call-request 201 in 928ms :: {"message":"Call request received! Our A…
+2:43:55 AM [express] GET /api/config.json 200 in 2ms
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757302116867,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <a4e79263-eac8-fea6-43c6-48e6bea09b5e@ruka.live>
+3:28:38 AM [express] POST /api/call-request 201 in 1461ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757396541697,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <6c4b21db-1afa-4f62-d911-0006dc9de878@ruka.live>
+5:42:27 AM [express] POST /api/call-request 201 in 5801ms :: {"message":"Call request received! Our …
+Zoho lead created successfully: {
+  jsonrpc: '2.0',
+  id: 1757398213413,
+  result: { content: [ [Object] ] }
+}
+Successfully created Zoho lead and triggered VAPI call
+Email notification sent: <9cae924b-b913-b9d7-618b-ae4bcd3da788@ruka.live>
+6:10:18 AM [express] POST /api/call-request 201 in 4994ms :: {"message":"Call request received! Our …
+
+> rest-express@1.0.0 start
+> NODE_ENV=production node dist/index.js
+
+6:14:56 PM [express] serving on port 8080
